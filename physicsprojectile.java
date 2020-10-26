@@ -48,19 +48,8 @@ public class physicsprojectile {
 		disUnit = disUnit.toLowerCase();
 		timeUnit = timeUnit.toLowerCase(); 
 		
-		
-//		
-//		System.out.print("What is your distance unit(ex: feet, meters, etc.): ");
-//		disUnit = input.nextLine();
-//		
-//		System.out.print("What is your time unit(ex: seconds, minutes, etc.): ");
-//		timeUnit = input.nextLine();
-		
-//		disUnit = disUnit.toLowerCase();
-//		timeUnit = timeUnit.toLowerCase(); 
-//		
-		
-		
+
+		//Tries to identify what the input is -Yes you could also use the .equals("") method with specific stirngs
 		if(wantInput.equals(timeStr) == false && wantInput.equals(disStr) == false && wantInput.equals(both) == false) {
 			System.out.println("Invalid cmd");
 			System.out.println("Your input: " + wantInput);
@@ -138,20 +127,9 @@ public class physicsprojectile {
 			}
 			
 			
-//			System.out.print("Would you like to know a height at a time?: ");
-//			timeHeight = input.nextLine();
-//			timeHeight = timeHeight.toLowerCase();
-//			if (timeHeight.equals("yes") ) {
-//				System.out.print("What time?: ");
-//				timeDis = input.nextDouble();
-//				height_wTime = height + Vy * timeDis + (-4.9) * timeDis * timeDis; 
-//				
-//				System.out.print("At " + timeDis + " the height is " + height_wTime);
-//				
-//				
-//			}
 
-			
+
+			//This is just another feature added to get time at a certain height - cmds: yes
 			System.out.print("Would you like to know a height at a time?: ");
 			
 			timeHeight = input.next();
@@ -167,7 +145,6 @@ public class physicsprojectile {
 				height_wTime = height + Vy * timeDis + (-4.9) * (timeDis * timeDis); 
 				height_wTime = (Math.round(height_wTime * 100.0)/100.0); 
 				
-//				System.out.println("At " + timeDis + " sec the height is " + height_wTime + "m");
 				
 				if(timeDis < 0 || timeDis > time) {
 					System.out.println("Time given: " + time + " invalid with the total airtime");
@@ -186,8 +163,7 @@ public class physicsprojectile {
 				}
 				
 				
-//				
-//				
+			
 		}
 			else {
 				System.out.println("Invalid input: " + timeHeight);
